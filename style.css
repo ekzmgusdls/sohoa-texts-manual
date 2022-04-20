@@ -9,7 +9,7 @@
     font-family: acumin-pro-wide, sans-serif;
     font-size: 4rem;
     font-weight: 100;
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
 }
 
 .symbol {
@@ -47,4 +47,5 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    transform: scale(3);
 }
