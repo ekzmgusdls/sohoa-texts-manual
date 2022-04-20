@@ -48,4 +48,5 @@ body {
     justify-content: center;
     height: 100vh;
     transform: scale(3);
+    overflow: hidden;
 }
