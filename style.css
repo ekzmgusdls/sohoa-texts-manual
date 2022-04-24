@@ -7,7 +7,7 @@
 
 .text-test {
     font-family: acumin-pro-wide, sans-serif;
-    font-size: 4rem;
+    font-size: 4.3rem;
     font-weight: 100;
     margin-bottom: 10vh;
 }
@@ -15,30 +15,23 @@
 .symbol {
     background: black;
     width: 7px;
+    height: 100%;
+}
+
+.test-symbol {
+    width: 280px;
+    transform: translate(11%);
 }
 
 .floor-1,
 .floor-2 {
-    height: 42.5px;
+    height: 60px;
     display: flex;
-    justify-content: space-between;
-    gap: 45px;
+    /* justify-content: space-between; */
 }
 
-.symbol-1 {
-    width: 7px;
-}
-.symbol-2 {
-    width: 6px;
-}
-.symbol-3 {
-    width: 5px;
-}
-.symbol-4 {
-    width: 4px;
-}
-.symbol-5 {
-    width: 3px;
+.floor-2 {
+    flex-direction: row-reverse;
 }
 
 body {
@@ -47,4 +40,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    /* transform: scale(3); */
+    overflow: hidden;
+}
+
+.test-row {
+    font-family: acumin-pro-wide, sans-serif;
+    font-size: 5rem;
 }

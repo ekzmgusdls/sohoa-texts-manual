@@ -9,65 +9,9 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="test-symbol">
-            <div class="floor-2">
-                <div class="symbol symbol-1"></div>
-                <div class="symbol symbol-2"></div>
-                <div class="symbol symbol-3"></div>
-                <div class="symbol symbol-4"></div>
-                <div class="symbol symbol-5"></div>
-            </div>
-            <div class="floor-1">
-                <div class="symbol symbol-5"></div>
-                <div class="symbol symbol-4"></div>
-                <div class="symbol symbol-3"></div>
-                <div class="symbol symbol-2"></div>
-                <div class="symbol symbol-1"></div>
-            </div>
-        </div>
-        <div class="test-container">
-            <div class="text-test text-test-1" style="-webkit-text-stroke: 6px">S</div>
-            <div class="text-test text-test-2" style="-webkit-text-stroke: 5px">O</div>
-            <div class="text-test text-test-3" style="-webkit-text-stroke: 4px">H</div>
-            <div class="text-test text-test-4" style="-webkit-text-stroke: 3px">O</div>
-            <div class="text-test text-test-5" style="-webkit-text-stroke: 2px">A</div>
-        </div>
-        <script>
-            console.log(document.querySelectorAll('.text-test'));
-            document.querySelectorAll('.text-test')[0].style.fontWeight;
-
-            // for (let i = 0; i < document.querySelectorAll('.text-test').length; i++) {
-            //     document
-            //         .querySelectorAll('.text-test')
-            //         [i].setAttribute('style', `-webkit-text-stroke: ${document.querySelectorAll('.text-test').length - i}px`);
-            // }
-
-            // }
-            function mappingAt(number, clientX) {
-                return (number / innerWidth) * clientX;
-            }
-
-            window.addEventListener('mousemove', (e) => {
-                const clientX = e.clientX;
-
-                document.querySelector('.text-test-1').setAttribute('style', `-webkit-text-stroke: ${6 - mappingAt(4, clientX)}px`);
-                document.querySelector('.text-test-2').setAttribute('style', `-webkit-text-stroke: ${5 - mappingAt(2, clientX)}px`);
-                document.querySelector('.text-test-4').setAttribute('style', `-webkit-text-stroke: ${3 + mappingAt(2, clientX)}px`);
-                document.querySelector('.text-test-5').setAttribute('style', `-webkit-text-stroke: ${2 + mappingAt(4, clientX)}px`);
-
-                document.querySelectorAll('.symbol-1').forEach((target) => {
-                    target.setAttribute('style', `width: ${7 - mappingAt(4, clientX)}px`);
-                });
-                document.querySelectorAll('.symbol-2').forEach((target) => {
-                    target.setAttribute('style', `width: ${6 - mappingAt(2, clientX)}px`);
-                });
-                document.querySelectorAll('.symbol-4').forEach((target) => {
-                    target.setAttribute('style', `width: ${4 + mappingAt(2, clientX)}px`);
-                });
-                document.querySelectorAll('.symbol-5').forEach((target) => {
-                    target.setAttribute('style', `width: ${2 + mappingAt(4, clientX)}px`);
-                });
-            });
-        </script>
+        <div class="test-symbol"></div>
+        <div class="test-row test-row-1">IN THE RIGHT LIGHT, AT THE RIGHT TIME</div>
+        <div class="test-row test-row-2">EVERYTHINGS IS EXTRAORDINARY</div>
+        <script src="main.js"></script>
     </body>
 </html>
