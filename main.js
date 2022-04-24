@@ -32,16 +32,17 @@ function makeTextRow(selector) {
             mappingArr.push(mappingOgArr[i] - mappingNewArr[i]);
         }
 
-        let callback = function () {
-            let ts = new Date().getTime();
-            let speed = 2;
+        addEventListener('mousemove', (e) => {
+            const clientX = e.clientX;
+
             for (let i = 0; i < length; i++) {
-                target.children[i].style['-webkit-text-stroke'] = `${
-                    maxWidth - step * i - ((Math.sin(ts * speed * (1 / 1000)) * mappingArr[i]) / 2 + mappingArr[i] / 2)
-                }px`;
-                // target.children[i].style.position = 'relative';
+                target.children[i].style['-webkit-text-stroke'] = `${maxWidth - step * i - mappingAt(mappingArr[i], clientX)}px`;
             }
             requestAnimationFrame(callback);
+        });
+
+        let callback = function () {
+            let ts = new Date().getTime();
         };
         requestAnimationFrame(callback);
     });
